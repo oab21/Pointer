@@ -1,0 +1,17 @@
+int x = 100;               // x is L-value, 100 is right -value
+int y = x + 200;		   // y is L-value, x + 200 is right value
+
+
+int x = 100;
+int &ref1 = x;             //ref1 is reference to l-value
+int &ref2 = 100            //Eror 100 is r-value
+
+
+The same when we pass by reference
+int square(int &n){
+	return n*n;
+}
+
+int num = 10;
+square(num)       //OK
+square(5)         // Error - can't reference r-value 5

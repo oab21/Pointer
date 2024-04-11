@@ -53,10 +53,15 @@ int main() {
 
 	/*
 		The associativity is right to left
-		*scores_pointer++  : we derefence pointer and increase pointer
+  			int scores[] = {100, 95, 68, -1};
+    			int *ptr = scores;
+    		*scores_pointer++  : we derefence pointer and increase pointer
+  			cout << *ptr++;         //100
+     			cout << *ptr;           //95
 		(*scores_pointer)++ : increase what pointer is pointing to
-
-	*/
+  			cout << (*ptr)++ << endl;           //100
+    			cout << *ptr << endl;               // 101
+	*/ 
 	while (*scores_ptr != -1)
 		cout << *scores_ptr++ << " ";   
 
